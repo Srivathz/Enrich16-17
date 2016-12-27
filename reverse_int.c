@@ -5,11 +5,13 @@ void main()
     long int num,rev=0,i,d=0;
     printf("Enter an integer ");
     scanf("%ld",&num);
-    for(i=abs(num);i>0;i/=10)
+    i=abs(num);
+    do
     {
         d=i%10;
         rev=rev*10+d;
-    }
+        i/=10
+    }while(i>0);
     if(num>0)
         printf("\n The reverse is: %ld",rev);
     else if(num<0)
