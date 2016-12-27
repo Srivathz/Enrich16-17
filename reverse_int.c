@@ -10,7 +10,7 @@ void main()
     {
         d=i%10;
         rev=rev*10+d;
-        i/=10
+        i/=10;
     }while(i>0);
     if(num>0)
         printf("\n The reverse is: %ld",rev);
