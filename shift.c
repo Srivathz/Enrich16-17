@@ -9,11 +9,10 @@ void main()
     printf("\nNo. of times to rotate : ");
     scanf("%d",&m);
     if((num<10000)||(num>99999))
-        printf("\n Not a 5 digit number);
+        printf("\n Not a 5 digit number");
     else
     {
-        m=m%5;
-        for(i=0;i<m;i++)
+        for(i=0;i<5-m;i++)
         { 
             rem=num%10;
             shift=num/10;
