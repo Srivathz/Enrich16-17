@@ -1,8 +1,8 @@
 #include<stdio.h>
-#include<math.h>
 void main()
 {
-    long int num,sm,i,dig=0,d[7];
+    long int num,sort=0;
+	int i,dig=0,d[7],j,temp;
     printf("Enter an integer ");
     scanf("%ld",&num);
 	for(i=num;i>0;i/=10)
@@ -10,7 +10,21 @@ void main()
 		d[dig]=i%10;
 		dig++;	
 	}
-	sm=a[0];
-	for(i=1;i<dig;i++)
+	
+	for(j=0;j<dig-1;j++)
 	{
-		if(
+		for(i=j+1;i<dig;i++)
+		{
+			if(d[i]<d[j])
+			{
+				temp=d[i];
+				d[i]=d[j];
+				d[j]=temp;
+			}
+		}
+	}	
+	for(i=0;i<dig;i++)
+		sort=sort*10+d[i];
+	printf("\n%ld",sort);
+}
+			
