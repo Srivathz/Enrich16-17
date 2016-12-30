@@ -6,7 +6,7 @@ void main()
     char str[100],rev[100];
     int i,j;
     printf("Enter a string");
-    scanf("%s",str);
+    gets(str);
     j=strlen(str);
     for(i=0;i<j;i++)
     	rev[i]=str[j-i-1];
