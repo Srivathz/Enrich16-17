@@ -9,7 +9,9 @@ void main()
     gets(str);
     j=strlen(str);
     for(i=0;i<j;i++)
-    	rev[i]=str[j-i-1];
+    {
+        rev[i]=str[j-i-1];
+    }    
     rev[i]='\0';
     if(strcmp(str,rev)==0)
         printf("\n The given string is a palindrome");
