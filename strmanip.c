@@ -12,8 +12,11 @@ void main()
         if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]==' '||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U');
         else
         {
-            mod[k]=str[i];
-            k++;
+            if(((str[i]>64)&&(str[i]<91))||((str[i]>96 )&&(str[i]<123))) 
+            {
+                mod[k]=str[i];
+                k++;
+            }   
         }    
     }
     mod[k]='\0';
