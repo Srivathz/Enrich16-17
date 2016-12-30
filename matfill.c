@@ -10,15 +10,21 @@ void main()
 		for(j=0;j<n;j++)
 		{
 			if((i+j)==k)
+			{
 				a[i][j]=1;
+			}	
 			else
-			    a[i][j]=0;
+			{
+				a[i][j]=0;
+			}	
 		}
 	}
 	for(i=0;i<m;i++)
 	{
 		printf("\n");
 		for(j=0;j<n;j++)
+		{
 			printf("%d   ",a[i][j]);
+		}	
 	}
 }
