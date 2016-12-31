@@ -18,7 +18,7 @@ void main()
 				k++;
 			}
 		}
-		if(str[i]>65)
+		if(((str[i]>64)&&(str[i]<91))||((str[i]>96 )&&(str[i]<123)))
 		{
 			ch[m]=flag;
 			m++;	
