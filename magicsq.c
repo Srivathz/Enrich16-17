@@ -2,7 +2,7 @@
 
 void main()
 {
-    int a[11][11],i,j,n,r=0,count=1,c;
+    int a[11][11],i,j,n,r=0,c;
     printf("Enter the order of the magic square (positive odd number)");
     scanf("%d",&n);
     for(i=0;i<n;i++)
@@ -12,7 +12,7 @@ void main()
     }
     c=n/2;
     a[r][c]=1;
-    for(i=1;i<(n*n);i++)
+    for(i=2;i<=(n*n);i++)
     {
         r-=1;
         c++;
@@ -22,7 +22,7 @@ void main()
             c=0;
         if(a[r][c]==0)
         {
-            a[r][c]=++count;
+            a[r][c]=i;
         }
         else if(a[r][c]!=0)
         {
@@ -32,7 +32,7 @@ void main()
             r-=n;
           if(c<0)
             c=n-1;
-          a[r][c]=++count;
+          a[r][c]=i;
         }
     }
 
