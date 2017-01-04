@@ -21,9 +21,7 @@ void main()
         if(c==n)
             c=0;
         if(a[r][c]==0)
-        {
             a[r][c]=i;
-        }
         else if(a[r][c]!=0)
         {
           r+=2;
