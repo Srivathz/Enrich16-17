@@ -14,12 +14,12 @@ int main()
     if(d%2==0)
         x=d/2;
     else
-        x=(d/2)-1;
+        x=(d/2)+1;
     for(i=x;i>=0;i--)
     {
-        if(dig[d/2+1]<dig[i])
+        if(dig[x]<dig[i])
         {
-            dig[d/2+1]+=1;
+            dig[x]+=1;
             break;
         }
     }
