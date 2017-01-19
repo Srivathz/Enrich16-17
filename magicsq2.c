@@ -3,7 +3,7 @@
 
 void main()
 {
-	int i,j,row=1,col,a[4][4];;
+	int i,j,row=1,col,a[4][4];
 	char op;
 	for(i=0;i<4;i++)
 	{
@@ -71,5 +71,5 @@ void main()
 				}
 				break;	
 		}
-	}while(op!='q');
+	}while((op!='Q')&&(op!='q'));
 }
