@@ -20,17 +20,17 @@ void main()
 		system("cls");
 		for(i=0;i<4;i++)
 		{
-			printf("\n------------------------------\n");
+			printf("\n---------------------------------\n|");
 			{
 				for(j=0;j<4;j++)
 				{
 					if(a[i][j]==32)
 					{
-						printf("|%c\t",a[i][j]);
+						printf("%c\t|",a[i][j]);
 					}
 					else
 					{
-						printf("|%d\t",a[i][j]);
+						printf("%d\t|",a[i][j]);
 					}
 				}
 			}
