@@ -9,8 +9,7 @@ void main()
 	{
 		for(j=0;j<4;j++)
 		{
-			a[i][j]=temp;
-			temp++;
+			a[i][j]=temp++;
 		}
 	}
 	a[3][3]=32;
