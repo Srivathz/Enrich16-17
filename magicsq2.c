@@ -3,16 +3,15 @@
 
 void main()
 {
-	int i,j,temp=1,row,col;
-	char op,a[4][4];
+	int i,j,row=1,col,a[4][4];;
+	char op;
 	for(i=0;i<4;i++)
 	{
 		for(j=0;j<4;j++)
 		{
-			a[i][j]=temp++;
+			a[i][j]=row++;
 		}
 	}
-	a[3][3]=32;
 	row=3;
 	col=3;
 	do
@@ -24,9 +23,9 @@ void main()
 			{
 				for(j=0;j<4;j++)
 				{
-					if(a[i][j]==32)
+					if(a[i][j]==16)
 					{
-						printf("%c\t|",a[i][j]);
+						printf(" \t|",a[i][j]);
 					}
 					else
 					{
@@ -39,44 +38,36 @@ void main()
 		scanf("%c",&op);
 		switch(op)
 		{
-			case 85:
-			case 117:
+			case 'U':
+			case 'u':
 				if(row>0)
 				{
-					temp=a[row][col];
 					a[row][col]=a[row-1][col];
-					row--;
-					a[row][col]=temp;
+					a[--row][col]=16;
 				}
 				break;
-			case 68:
-			case 100:
+			case 'D':
+			case 'd':
 				if(row<3)
 				{
-					temp=a[row][col];
 					a[row][col]=a[row+1][col];
-					row++;
-					a[row][col]=temp;
+					a[++row][col]=16;
 				}
 				break;
-			case 76:
-			case 108:
+			case 'L':
+			case 'l':
 				if(col>0)
 				{
-					temp=a[row][col];
 					a[row][col]=a[row][col-1];
-					col--;
-					a[row][col]=temp;
+					a[row][--col]=16;
 				}
 				break;	
-			case 82:
-			case 114:
+			case 'R':
+			case 'r':
 				if(col<3)
 				{
-					temp=a[row][col];
 					a[row][col]=a[row][col+1];
-					col++;
-					a[row][col]=temp;
+					a[row][++col]=16;
 				}
 				break;	
 		}
