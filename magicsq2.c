@@ -79,9 +79,6 @@ void main()
 					a[row][col]=temp;
 				}
 				break;	
-			case 81:
-			case 113:
-				exit(0);	
 		}
 	}while(op!='q');
 }
