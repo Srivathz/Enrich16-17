@@ -28,6 +28,7 @@ void main()
     		a[j][random]=temp;
     	}
 	}
+	
 	do
 	{
 		system("cls");
@@ -115,7 +116,7 @@ char check(int arr[4][4],char c)
 				return 'A';				
 		}
 	}
-	if(row==16)
+	if(chk==17)
 	{
 		printf("\n\nCongrats!! You won!!");
 		return 'Q';
