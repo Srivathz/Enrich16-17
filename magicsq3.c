@@ -10,7 +10,7 @@ void main()
 {
 	int i,j,a[4][4],temp=1,random;
 	char op;
-	for(i=0;i<4;i++)
+	for(i=0;i<4;i++)                                    //array initialisation
 	{
 		for(j=0;j<4;j++)
 		{
@@ -18,15 +18,15 @@ void main()
 		}
 	}
 	
-	for (i=0;i<4;i++)
+	for (i=0;i<4;i++)									//randomizes the array
 	{   
 		for(j=0;j<3;j++)
 		{
 			temp=a[i][j];
-    		random=rand()%3;
-	    	a[i][j]=a[j][random];
-    		a[j][random]=temp;
-    	}
+    			random=rand()%3;
+	    		a[i][j]=a[j][random];
+    			a[j][random]=temp;
+    		}
 	}
 	
 	do
@@ -40,7 +40,7 @@ void main()
 	}while(op!='Q');
 }
 
-void print(int arr[4][4])
+void print(int arr[4][4])									//prints the array
 {
 	int i,j;
 	for(i=0;i<4;i++)
@@ -62,7 +62,7 @@ void print(int arr[4][4])
 	}
 }
 
-void move(int arr[4][4],char c)
+void move(int arr[4][4],char c)									//manipulates array according to input
 {
 	switch(c)
 	{
@@ -101,7 +101,7 @@ void move(int arr[4][4],char c)
 	}
 }
 
-char check(int arr[4][4],char c)
+char check(int arr[4][4],char c)								//checks for game completion
 {
 	int i,j,chk=1;
 	if((c=='q')||(c=='Q'))
